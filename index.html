@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>WEB</title>
-	
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>итог</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+<div class="THE-FATHER-CONTAINER">
+  <div class="THE-BIG-ULTRA-MEGA-CONTAINER">
+    
+    <div id="top-text-box">
+      <H2 class="txtZD">Задачи</H2>
+      <H2 class="txtZDN">Задач на сегодня нет</H2>
+    </div>
+    <div class="task-container">
+        <div class="task" class="tsk-1">
+            <div class="check"><div class="check-circle-inside"></div></div>
+            <p class="txt-task">купить молока</p>
+        </div>
+        <div class="task" class="tsk-2">
+            <div class="check"></div>
+            <p class="txt-task">угнать подлодку</p>
+        </div>
+         <div class="task" class="tsk-3">
+            <div class="check"></div>
+            <h2 class="txt-task">замерзнуть</h2>
+        </div>
+    </div>
+  </div>
+</div>
+  <div id="BtnApp">
 
-	<div id="rectangle">
-		
-		<h2 class="mdwin_text">Тут будет текст из модального окна</h2>
-		
-		<button id="btn_modal" class="btn-blue">
-			<p class="bl-btn-txt"><b>Открыть</b></p>
-		</button>	
-			
-			<div id="my_modal" class="modal">	
-				<div class="modal_content" >
-				 <span class="close"></span> 
-					<p id="MDwin_Inside" class="mdwin_text">Модальное окно</p>
-					<p id="MDeadWin_Inside" class="mdwin_text">Введите текст ниже чтоб отобразить его в приложении:</p>
-					
-					<p id="mdwin_alertgrey">После сохранения окно закроется автоматически</p>
-					
-					<input type="text" class="mdwin_input" placeholder="Введите текст">
-					
-					<button id="btn_inside" class="btn-blue">
-			<p class="bl-btn-txt"><b>Сохранить</b></p>
-		</button>		
+    <div id="btn-modal" class="BtnPlus" v-on:click="showModal = true"> <p class="plus">+</p>
+    </div>
 
-				</div>
-			</div>
-			
-		
+    <div v-if="showModal" class="modal-window">
+      
+      <div @click="showModal = false" class="CloserModalOutSpace"><!--Пространство вокруг модального окна для закрытия окна--></div>
+        <div class="modal_content" > <!--Белое окно-->
+            <p id="MDwin_Inside" class="mdwin_text">Добавить задачу</p>
+            <input type="text" class="mdwin_input" placeholder="Введите задачу...">
+            <button id="btn_inside" class="btn-blue">
+            <p class="bl-btn-txt"><b>Добавить задачу</b></p>
+        
+      </div>
+    </div>
+   
+  </div>
 
-	</div>	
 
-<script src="modal.js"></script>
 
+
+
+  <script src="modal.js"></script>
 </body>
 </html>

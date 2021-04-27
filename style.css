@@ -1,19 +1,174 @@
-		
 body {
-	background-color: rgb(241,241,241);
-	position: relative
+	background: #F3F3F3;
+	/*
+	width: 1440px;
+	height: 1024px;
+	*/
 }
-
-#rectangle {
+.txt, .txtZD, .txtZDN, .txtMD, .txtBtn {
 	position: absolute;
-	width: 700px;
-	height: 246px;
-	left: 370px;
-	top: 44px;
-	background: white;
-	border-radius: 10px;
+	width: 191px;
+	height: 22px;
+	
+	font-family: Roboto, Calibri;
+	font-style: normal;
+	font-weight: normal;
 	font-size: 19px;
+	line-height: 22px;
 }
+ 	.txtZD {
+ 		/* 'Задачи'' */
+		width: 66px;
+	
+		font-weight: bold;
+		font-size: 19px;
+		top: 76px;
+ 	}
+
+ 	.txtZDN {
+ 		/* Задач на сегодня нет */
+ 		width: 200px;
+		top: 133px;
+ 	}
+ 	.txtMD {
+
+ 	}
+ 	.txtBtn {
+
+ 	}
+ 	.txt-task{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+ 	}
+.CloserModalOutSpace {
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+}
+#top-text-box {
+}
+.modal-window {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+.THE-FATHER-CONTAINER{
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+}
+.THE-BIG-ULTRA-MEGA-CONTAINER{
+	display: flex;
+	flex-direction: column;
+
+
+
+	}
+/*
+* ЗАДАЧИ		ЗАДАЧИ			ЗАДАЧИ
+* 		ЗАДАЧИ			ЗАДАЧИ
+* ЗАДАЧИ		ЗАДАЧИ			ЗАДАЧИ
+* 		ЗАДАЧИ			ЗАДАЧИ	
+*/
+.task-container {
+	/*коробка для задач*/
+display: flex;
+flex-direction: column;
+margin-top: 122px;
+
+
+}
+.task {
+/* Оригинальная задача, родительский класс */
+
+display: flex;
+align-items: center;
+width: 700px;
+height: 64px;
+
+	/*left: 370px;
+	top: 122px;*/
+
+background: #FFFFFF;
+border-radius: 10px;
+margin-bottom: 12px;
+}
+.check {
+	/* Чекбокс синий круг */
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: center;
+margin-left: 19px;
+margin-right: 12px;
+width: 24px;
+height: 24px;
+
+background: #73A4EF;
+border-radius: 29px;
+}
+.check-circle-inside{
+	display: flex;
+	align-items: center;
+	flex-direction: center;
+	background-color: #FFF;
+	border-radius: 29px;
+	width: 8px;
+	height: 8px
+}
+.check:hover {
+    background-image: linear-gradient( rgb(115,164,239), rgb(115,239,164));
+ }
+
+	 .tsk-1 {
+
+	 }
+	 .tsk-2 {
+
+ 	 }
+ 	 .tsk-3 {
+
+ 	 }	
+/*
+* ЗАДАЧИ		ЗАДАЧИ			ЗАДАЧИ
+* 		ЗАДАЧИ			ЗАДАЧИ
+* ЗАДАЧИ		ЗАДАЧИ			ЗАДАЧИ
+* 		ЗАДАЧИ			ЗАДАЧИ	
+*/
+
+.BtnPlus {
+	/* Добавить заметку */
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	right: 396px;
+	bottom: 78px;
+
+	background: #73A4EF;
+	border-radius: 100px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+.plus {
+	/* + */
+	position: absolute;
+
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: Roboto, Calibri;
+}
+/* предыдущие технологии */
+
 .mdwin_text
 	{
 	position: absolute;
@@ -49,217 +204,68 @@ body {
 	line-height: 16px;
 }
 
-.btn-blue:hover {
+.BtnPlus:hover {
     background-image: linear-gradient( rgb(115,164,239), rgb(115,239,164));
     color: white;
-
+ }
+#btn_inside:hover {
+    background-image: linear-gradient( rgb(115,164,239), rgb(115,239,164));
+    color: white;
 }
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 1000;
-}
-.modal .modal_content {
+.modal-window .modal_content {
+/* Модальное окно */
 position: absolute;
 width: 700px;
-height: 364px;
-left: 370px;
-top: 212px;
-background: white;
+height: 211px;
+top: 122px;
+margin-left: 50%;
+	transform: translate(-50%, 0);
+background: #FFFFFF;
 border-radius: 10px;
+z-index: 2000;
 }
 
 #MDwin_Inside {
-width: 550px;
-height: 22px;
-left: 24px;
-top: 36px;
-}
+/* Добавить задачу */
+	position: absolute;
+	width: 255px;
+	height: 22px;
+	left: 27px;
+	top: 25px;
+	margin-top: 0px;
 
-#MDeadWin_Inside {
-position: absolute;
-width: 620px;
-height: 19px;
-left: 24px;
-top: 72px;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
+	font-family: Roboto, Calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 22px;
 }
 
 .mdwin_input {
-position: absolute;
-width: 650px;
-height: 55px;
-left: 25px;
-top: 114px;
-background: #FFFFFF;
-border: 2px solid #F3F3F3;
-box-sizing: border-box;
-border-radius: 10px;
-outline-color: #ccccff;
+/* Поле для ввода задачи */
+	position: absolute;
+	width: 647px;
+	height: 58px;
+	left: 27px;
+	top: 60px;
+	margin-top: 13px;
+	background: #D9D9D9;
+	border-radius: 10px;
+
+	border: 2px solid #F3F3F3;
+	box-sizing: border-box;
+	outline-color: #ccccff;
 }
 
 
 #btn_inside {
-width: 190px;
-height: 49px;
-left: 255px;
-top: 275px;
-}
-
-#mdwin_alertgrey {
-position: absolute;
-width: 384px;
-height: 14px;
-left: 24px;
-top: 177px;
-font-family: Roboto, Calibri;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-color: #979797;
-}
-
-/*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*/
-/*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*/
-/*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*/
-/*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*//*АДАПТИВ*/
-
-@media only screen and (max-width: 680px) {
-
-	#rectangle {
-		position: absolute;
-		width: 350px;
-		height: 246px;
-		left: 0px;
-		top: 0px;
-		background: white;
-		border-radius: 10px;
-		font-size: 19px;
-	}	
-
-	.mdwin_text
-		{
-		position: absolute;
-		width: 320px;
-		height: 22px;
-		left: 33px;
-		top: 0px;
-		font-family: Roboto, Calibri;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 12pt;
-		line-height: 22px;
-		}
-
-	.btn-blue {
-	    background-color: rgb(115,164,239); 
-	    color: white;
-	    border: none;
-	    text-align: center;
-	    font-size: 14px;
-	    border-radius: 10px;
-		position: absolute;
-		width: 190px;
-		height: 49px;
-		left: 255px;
-		top: 70px;  
-		outline-color: #ccccff;
-
-		left: 50%;
-		transform: translate(-50%, 0);
-		  }
-	.mdwin_text .bl-btn-txt{
-		width: 60px;
-		height: 16px;
-		font-size: 14pt;
-		line-height: 16px;
-
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
-
-	.modal {
-	    display: none;
-	    position: fixed;
-	    z-index: 1;
-	    left: 0;
-	    top: 0;
-	    width: 100%;
-	    height: 100%;
-	    overflow: auto;
-	    background-color: rgba(0,0,0,0.6);
-	    z-index: 1000;
-	}
-	.modal .modal_content {
+	/*КНОПКА Добавить задачку */
 	position: absolute;
-	width: 340px;
-	height: 364px;
-	background: white;
+	width: 647px;
+	height: 58px;
+	left: 27px;
+	top: 128px;
+	margin-top: 10px;
+	background: #73A4EF;
 	border-radius: 10px;
-	top:0px;
-		left: 50%;
-		transform: translate(-50%, 0);
-
-	}
-
-	#MDwin_Inside {
-	width: 340px;
-	height: 22px;
-	left: 4px;
-	top: 9px;
-	}
-
-	#MDeadWin_Inside {
-	position: absolute;
-	width: 340px;
-	height: 19px;
-	left: 24px;
-	top: 72px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12pt;
-
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
-
-	.mdwin_input {
-	position: absolute;
-	width: 310px;
-	height: 55px;
-	left: 2px;
-	top: 154px;
-	background: #FFFFFF;
-	border: 2px solid #F3F3F3;
-	box-sizing: border-box;
-	border-radius: 10px;
-	outline-color: #ccccff;
-	}
-
-
-	#btn_inside {
-	width: 190px;
-	height: 49px;
-	top: 215px;
-		left: 50%;
-		transform: translate(-50%, 0);
-
-	}
-
-	#mdwin_alertgrey {
-		content: none;
-	}
-
-
 }
